@@ -1,8 +1,3 @@
-// @import './modules/toggleMenu'
-
-console.log("hello creative minds ")
-
-
 function toggleMeu(){
   let hamburger = document.querySelector('.hamburger')
   let bar1 = hamburger.querySelector('.bar-1')

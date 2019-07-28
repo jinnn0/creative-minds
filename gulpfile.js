@@ -3,7 +3,7 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync').create(),
       uglifyCss = require('gulp-uglifycss')
  
-  
+   
 
 gulp.task('sass', function(){
    return gulp.src('./src/styles/**/*.scss')

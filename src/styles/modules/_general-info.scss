@@ -1,0 +1,46 @@
+.general-info {
+  padding-top: 100px; 
+      
+         .container {
+           width: 90%;
+         }
+
+          &__about,
+          &__support,
+          &__contact {
+            width: 100%;
+            height: calc(100vh - 100px);
+            border-bottom: 1px solid  rgb(211, 210, 210);
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: 600; 
+          }
+ 
+          &__contact {
+            border-bottom: 1px solid  transparent;
+
+            a {
+              letter-spacing: 0.08em;
+            }
+          }
+
+          .bold {
+            font-weight: 600;
+          }
+
+          h3 {
+            padding-bottom: 250px;
+          }
+ 
+          p {
+            width: 100%;
+            padding: 0 50px;
+            padding-bottom: 20px;
+            text-align: center;
+            font-size: 25px;
+          }
+
+          span {
+            font-weight: bold;
+          }
+}

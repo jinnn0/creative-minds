@@ -2,21 +2,21 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       browserSync = require('browser-sync').create(),
       uglifyCss = require('gulp-uglifycss')
-
+ 
   
 
 gulp.task('sass', function(){
-   return gulp.src('./app/src/styles/**/*.scss')
+   return gulp.src('./src/styles/**/*.scss')
               .pipe(sass()
               .on('error', sass.logError))           
-              .pipe(gulp.dest('./app/temp/style'))
+              .pipe(gulp.dest('./temp/style'))
               .pipe(browserSync.stream())
     })
 
 
 gulp.task('scripts', function(){
-   return gulp.src('./app/src/scripts/*.js')
-              .pipe(gulp.dest('./app/temp/script'))
+   return gulp.src('./src/scripts/*.js')
+              .pipe(gulp.dest('./temp/script'))
 })
 
 
@@ -32,7 +32,7 @@ gulp.task('watch', function(){
     },
   })
 
-  gulp.watch('./app/*.html', browserSync.reload)
-  gulp.watch('./app/src/styles/**/*.scss', ['sass'])
-  gulp.watch('./app/src/scripts/**/*.js', browserSync.reload)
+  gulp.watch('./*.html', browserSync.reload)
+  gulp.watch('./src/styles/**/*.scss', ['sass'])
+  gulp.watch('./src/scripts/**/*.js', browserSync.reload)
 }) 

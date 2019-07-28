@@ -3,7 +3,7 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync').create(),
       uglifyCss = require('gulp-uglifycss')
 
- 
+  
 
 gulp.task('sass', function(){
    return gulp.src('./app/src/styles/**/*.scss')
@@ -28,7 +28,7 @@ gulp.task('watch', function(){
   browserSync.init({
     notify: false,
     server: {
-      baseDir: './app'
+      baseDir: './'
     },
   })
 

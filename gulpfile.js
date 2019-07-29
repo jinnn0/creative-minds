@@ -1,22 +1,23 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       browserSync = require('browser-sync').create(),
+      webpack = require('webpack'),
+      webpackConfig = require('./webpack.config')
       uglifyCss = require('gulp-uglifycss')
  
-   
+    
 
 gulp.task('sass', function(){
    return gulp.src('./src/styles/**/*.scss')
               .pipe(sass()
               .on('error', sass.logError))           
-              .pipe(gulp.dest('./temp/style'))
+              .pipe(gulp.dest('./temp/styles'))
               .pipe(browserSync.stream())
     })
 
 
 gulp.task('scripts', function(){
-   return gulp.src('./src/scripts/*.js')
-              .pipe(gulp.dest('./temp/script'))
+     webpack()
 })
 
 

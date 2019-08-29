@@ -1,9 +1,9 @@
 # Creative-Minds
 
-Creative Minds is the place where we share different ideas and inspirations
+Creative Minds is the project where I share my own inspirations with meaningful quotes.
 
-We believe in **creativity** and **people**
+It mainly emphasizes the **creativity** and **we** as a human being and a one indivisual
 
 ------
 
-For recent posts check out our website [Creative Minds](https://jinnn0.github.io/creative-minds/)
+For recent inspirations check out our website [Creative Minds](https://jinnn0.github.io/creative-minds/)

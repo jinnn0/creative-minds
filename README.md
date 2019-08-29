@@ -2,7 +2,7 @@
 
 Creative Minds is the project where I share my own inspirations with meaningful quotes.
 
-It mainly emphasizes the **creativity** and **we** as a human being and a one indivisual
+It mainly emphasizes the **creativity** and **we** as a **human being** and a one **indivisual**
 
 ------
 

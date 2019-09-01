@@ -20,8 +20,14 @@ a {
   top: 0;
   bottom: 0; }
   .header-has-overlay {
+    animation: showHeader .3s ease-in-out .5s forwards; }
+
+@keyframes showHeader {
+  0% {
+    background-color: transparent; }
+  100% {
     background-color: transparent;
-    z-index: 300; }
+    z-index: 200; } }
   .header-content {
     position: relative;
     width: 90%;
@@ -30,8 +36,7 @@ a {
     border-bottom: 1px solid  #EBEBEB;
     display: flex; }
   .header-content-has-overlay {
-    border-bottom: 1px solid transparent;
-    animation: changeColor .3s ease .7s forwards; }
+    animation: changeColor .3s ease .8s forwards; }
 
 @keyframes changeColor {
   100% {
@@ -82,7 +87,7 @@ a {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 200;
+  z-index: 100;
   transform: translateY(-100%);
   transition: all .6s ease-in-out .1s; }
   .overlay-visible {
@@ -115,9 +120,8 @@ a {
     width: 90%; }
   .general-info__about, .general-info__support, .general-info__contact {
     width: 100%;
-    height: calc(100vh - 100px);
-    border-bottom: 1px solid #d3d2d2;
-    padding-top: 30px;
+    height: 100vh;
+    padding-top: 130px;
     font-size: 30px;
     font-weight: 600; }
   .general-info__contact {
@@ -127,7 +131,10 @@ a {
   .general-info .bold {
     font-weight: 600; }
   .general-info h3 {
-    padding-bottom: 250px; }
+    padding-bottom: 200px;
+    padding-top: 50px;
+    margin-top: -32px;
+    border-top: 1px solid #d3d2d2; }
   .general-info p {
     width: 100%;
     padding: 0 50px;

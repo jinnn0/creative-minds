@@ -9,12 +9,24 @@
           &__support,
           &__contact {
             width: 100%;
-            height: calc(100vh - 100px);
-            border-bottom: 1px solid  rgb(211, 210, 210);
-            padding-top: 30px;
+            // height: calc(100vh - 100px);
+            height: 100vh;
+            padding-top: 130px;
             font-size: 30px;
             font-weight: 600; 
+            // border-bottom: 1px solid  rgb(211, 210, 210);
           }
+
+          // &__about {
+          //   background-color: bisque;
+          // }
+          // &__support {
+          //   background-color: rgb(178, 228, 255);
+          // }
+          // &__contact {
+          //   background-color: rgb(255, 168, 201);
+          // }
+
  
           &__contact {
             border-bottom: 1px solid  transparent;
@@ -29,7 +41,11 @@
           }
 
           h3 {
-            padding-bottom: 250px;
+            // padding-bottom: 250px;
+            padding-bottom: 200px;
+            padding-top: 50px;
+            margin-top: -32px;
+            border-top: 1px solid  rgb(211, 210, 210);
           }
  
           p {

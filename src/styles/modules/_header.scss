@@ -6,11 +6,20 @@
   top: 0;   
   bottom: 0; 
 
-  &-has-overlay {
-    background-color: transparent;
-    z-index: 300;
- }
 
+  &-has-overlay {
+    animation: showHeader .3s ease-in-out .5s forwards;
+
+    @keyframes showHeader {
+      0%{
+        background-color: transparent;
+      }
+      100% {
+        background-color: transparent;
+        z-index: 200;
+      }
+    }
+ }
 
         &-content {
           position: relative;
@@ -22,8 +31,8 @@
         }
 
         &-content-has-overlay {
-          border-bottom: 1px solid transparent;
-          animation: changeColor .3s ease .7s forwards;
+          // border-bottom: 1px solid transparent;
+          animation: changeColor .3s ease .8s forwards;
         }
 
         @keyframes changeColor {
@@ -92,3 +101,4 @@
         }
   
 }
+

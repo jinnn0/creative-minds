@@ -853,14 +853,78 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_toggleMenu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleMenu.js */ "./src/scripts/modules/toggleMenu.js");
-/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lazysizes */ "./node_modules/lazysizes/lazysizes.js");
-/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lazysizes__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_toggleMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/toggleMenu */ "./src/scripts/modules/toggleMenu.js");
+/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/smoothScroll */ "./src/scripts/modules/smoothScroll.js");
+/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lazysizes */ "./node_modules/lazysizes/lazysizes.js");
+/* harmony import */ var lazysizes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lazysizes__WEBPACK_IMPORTED_MODULE_2__);
 
 
-Object(_modules_toggleMenu_js__WEBPACK_IMPORTED_MODULE_0__["default"])() 
 
 
+Object(_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_1__["scrollTo"])()
+
+
+window.onload = function() {
+  if (window.location.href.length == 22
+  || window.location.href.includes('index.html')
+  || window.location.href.includes('art.html')
+  || window.location.href.includes('design.html')) {
+    Object(_modules_toggleMenu__WEBPACK_IMPORTED_MODULE_0__["toggleMeu"])()
+  }
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/smoothScroll.js":
+/*!*********************************************!*\
+  !*** ./src/scripts/modules/smoothScroll.js ***!
+  \*********************************************/
+/*! exports provided: scrollTo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollTo", function() { return scrollTo; });
+function scrollTo(){
+  // ling tag with the "scroll" class
+  // const links = document.querySelectorAll('.scroll')
+  // for(let i =0; i < links.length; i++){
+  //     links[i].addEventListener('click', scrollAnchors)
+  // }
+
+  // any or all link tag 
+  const links = document.querySelectorAll('a')
+  for (let i = 0; i < links.length; i++) {
+    let link = links[i]
+    if ((link.href && link.href.indexOf('#') != -1) 
+       && ((link.pathname == location.pathname) 
+       || ('/' + link.pathname == location.pathname)) 
+       && (link.search == location.search)) {
+      link.onclick = scrollAnchors;
+    }
+  }
+
+
+  function scrollAnchors(e, respond = null) {
+      e.preventDefault()
+      const distanceToTop = el => Math.floor(el.getBoundingClientRect().top)
+      let targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href')
+      const targetAnchor = document.querySelector(targetID)
+      if (!targetAnchor) return;
+      const originalTop = distanceToTop(targetAnchor)
+
+      window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' })
+      
+      const checkIfDone = setInterval(function() {
+          const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2
+          if (distanceToTop(targetAnchor) === 0 || atBottom) {
+              targetAnchor.tabIndex = '-1'
+              window.history.pushState('', '', targetID);
+              clearInterval(checkIfDone)
+          }
+      }, 100)
+  }
+}
 
 /***/ }),
 
@@ -868,16 +932,16 @@ Object(_modules_toggleMenu_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
 /*!*******************************************!*\
   !*** ./src/scripts/modules/toggleMenu.js ***!
   \*******************************************/
-/*! exports provided: default */
+/*! exports provided: toggleMeu */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return toggleMeu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggleMeu", function() { return toggleMeu; });
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_0__);
 
-
+ 
 function toggleMeu(){
   let hamburger = document.querySelector('.hamburger')
   let bar1 = hamburger.querySelector('.bar-1')

@@ -1,11 +1,4 @@
 export function scrollTo(){
-  // ling tag with the "scroll" class
-  // const links = document.querySelectorAll('.scroll')
-  // for(let i =0; i < links.length; i++){
-  //     links[i].addEventListener('click', scrollAnchors)
-  // }
-
-  // any or all link tag 
   const links = document.querySelectorAll('a')
   for (let i = 0; i < links.length; i++) {
     let link = links[i]

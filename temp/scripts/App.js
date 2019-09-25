@@ -886,13 +886,6 @@ window.onload = function() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollTo", function() { return scrollTo; });
 function scrollTo(){
-  // ling tag with the "scroll" class
-  // const links = document.querySelectorAll('.scroll')
-  // for(let i =0; i < links.length; i++){
-  //     links[i].addEventListener('click', scrollAnchors)
-  // }
-
-  // any or all link tag 
   const links = document.querySelectorAll('a')
   for (let i = 0; i < links.length; i++) {
     let link = links[i]

@@ -119,7 +119,6 @@ a {
   .general-info .container {
     width: 90%; }
   .general-info__about, .general-info__support, .general-info__contact {
-    width: 100%;
     height: 100vh;
     padding-top: 130px;
     font-size: 30px;

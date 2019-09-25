@@ -958,7 +958,7 @@ function toggleMeu(){
     bar2.classList.toggle('bar-2-rotate')
     aos__WEBPACK_IMPORTED_MODULE_0___default.a.init()
   })
-}
+} 
 
 /***/ })
 

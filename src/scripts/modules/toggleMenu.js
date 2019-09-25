@@ -16,4 +16,4 @@ export function toggleMeu(){
     bar2.classList.toggle('bar-2-rotate')
     AOS.init()
   })
-}
+} 

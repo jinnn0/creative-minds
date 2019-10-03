@@ -1,5 +1,5 @@
 import AOS from 'aos'
- 
+  
 export function toggleMeu(){
   let hamburger = document.querySelector('.hamburger')
   let bar1 = hamburger.querySelector('.bar-1')
@@ -9,6 +9,7 @@ export function toggleMeu(){
   let headerContent = header.querySelector('.header-content')
   
   hamburger.addEventListener('click', () => {
+    console.log("you clicked me");
     overlay.classList.toggle('overlay-visible')
     header.classList.toggle('header-has-overlay')
     headerContent.classList.toggle('header-content-has-overlay')

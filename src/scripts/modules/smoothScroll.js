@@ -30,4 +30,4 @@ export function scrollTo(){
           }
       }, 100)
   }
-}
+} 

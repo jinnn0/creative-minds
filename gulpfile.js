@@ -5,7 +5,7 @@ const gulp = require('gulp'),
       webpackConfig = require('./webpack.config')
       uglifyCss = require('gulp-uglifycss')
  
-     
+      
 
 gulp.task('sass', function(){
    return gulp.src('./src/styles/**/*.scss')
@@ -31,7 +31,7 @@ gulp.task('watch', function(){
     notify: false,
     server: {
       baseDir: './'
-    },
+    }, 
   })
 
   gulp.watch('./*.html', browserSync.reload)

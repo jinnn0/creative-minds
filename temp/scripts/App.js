@@ -862,7 +862,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 Object(_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_1__["scrollTo"])()
-
+ 
 
 window.onload = function() {
   if (window.location.href.length == 22
@@ -917,7 +917,7 @@ function scrollTo(){
           }
       }, 100)
   }
-}
+} 
 
 /***/ }),
 
@@ -934,7 +934,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_0__);
 
- 
+  
 function toggleMeu(){
   let hamburger = document.querySelector('.hamburger')
   let bar1 = hamburger.querySelector('.bar-1')
@@ -944,6 +944,7 @@ function toggleMeu(){
   let headerContent = header.querySelector('.header-content')
   
   hamburger.addEventListener('click', () => {
+    console.log("you clicked me");
     overlay.classList.toggle('overlay-visible')
     header.classList.toggle('header-has-overlay')
     headerContent.classList.toggle('header-content-has-overlay')

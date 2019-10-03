@@ -7,7 +7,7 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "author": "Jinyoung J",
-  "license": "ISC",
+  "license": "ISC", 
   "dependencies": {},
   "devDependencies": {
     "aos": "^2.3.4",

@@ -3,7 +3,7 @@ import {scrollTo} from './modules/smoothScroll'
 import 'lazysizes'
 
 scrollTo()
-
+ 
 
 window.onload = function() {
   if (window.location.href.length == 22

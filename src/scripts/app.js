@@ -4,7 +4,7 @@ import 'lazysizes'
 
 scrollTo()
  
-
+ 
 window.onload = function() {
   if (window.location.href.length == 22
   || window.location.href.includes('index.html')

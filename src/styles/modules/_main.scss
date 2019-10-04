@@ -49,7 +49,7 @@ main {
 
                 @include atMedium {
                   max-width: 75%;
-                }
+                } 
 
                 @include atLarge {
                   max-width: 70%;
@@ -72,4 +72,5 @@ main {
                 line-height: 100%;
                 align-self: center;
       }
-}
+  }
+}  

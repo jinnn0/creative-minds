@@ -1,7 +1,7 @@
 {
   "name": "creative-minds",
   "version": "1.0.0",
-  "description": "",
+  "description": "", 
   "main": "app.js",
   "scripts": {
     "webpack": "webpack --config webpack.config.js"

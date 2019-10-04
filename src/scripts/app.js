@@ -7,9 +7,11 @@ scrollTo()
  
 window.onload = function() {
   if (window.location.href.length == 22
+  || window.location.href.length == 40
   || window.location.href.includes('index.html')
   || window.location.href.includes('art.html')
   || window.location.href.includes('design.html')) {
     toggleMeu()
   }
 }
+console.log(window.location.href.length);

@@ -873,7 +873,16 @@ window.onload = function() {
   }
 }
 
-console.log("hello there");
+let colors = ["#D4B3FF", "#AEA2E8", "#BEC4FF", "#A2BCE8", "#B3E2FF"]
+function randomColor(){
+  return Math.floor(Math.random() * colors.length)
+}
+
+let logo = document.querySelector('a[href*="index.html"] p')
+logo.addEventListener('click', ()=> {
+  let body = document.querySelector('body')
+  body.style.backgroundColor = colors[randomColor()]
+})
 
 /***/ }),
 
@@ -944,9 +953,9 @@ function toggleMeu(){
   let overlay = document.querySelector('.overlay')
   let header = document.querySelector('.header')
   let headerContent = header.querySelector('.header-content')
-  
+   
   hamburger.addEventListener('click', () => {
-    console.log("you clicked me");
+    console.log("toggle menue");   
     overlay.classList.toggle('overlay-visible')
     header.classList.toggle('header-has-overlay')
     headerContent.classList.toggle('header-content-has-overlay')

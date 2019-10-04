@@ -7,9 +7,9 @@ export function toggleMeu(){
   let overlay = document.querySelector('.overlay')
   let header = document.querySelector('.header')
   let headerContent = header.querySelector('.header-content')
-  
+   
   hamburger.addEventListener('click', () => {
-    console.log("you clicked me");
+    console.log("toggle menue");   
     overlay.classList.toggle('overlay-visible')
     header.classList.toggle('header-has-overlay')
     headerContent.classList.toggle('header-content-has-overlay')

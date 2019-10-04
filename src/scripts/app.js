@@ -13,3 +13,5 @@ window.onload = function() {
     toggleMeu()
   }
 }
+
+console.log("hello there");

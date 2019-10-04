@@ -873,6 +873,8 @@ window.onload = function() {
   }
 }
 
+console.log("hello there");
+
 /***/ }),
 
 /***/ "./src/scripts/modules/smoothScroll.js":

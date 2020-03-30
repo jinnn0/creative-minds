@@ -6,9 +6,15 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+
+
+  @include atMedium {
+    width: 90%;
+  }
+
  
       .social {
-        width: 100%;
+        width: 50%;
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
@@ -18,11 +24,22 @@ footer {
         }
 
               a {
+                width: 40px;
+                height: 40px;
                 border: 1px solid transparent;
+                cursor: pointer;
+
+                // border: 1px solid black;
               }
 
               a:hover {
-                border-bottom: 1px solid black;
+                // border-bottom: 1px solid black;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
               }
       } 
 }  

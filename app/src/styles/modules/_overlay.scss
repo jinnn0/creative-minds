@@ -21,10 +21,14 @@
             width: 90%;
             height: 100vh;
             margin: 0 auto;
-            padding-top: 130px;
+            padding-top: 4rem;
             display: flex;
             border-bottom: 1px solid  rgb(211, 210, 210);
             z-index: 500;
+
+            @include atSmall {
+              padding-top: 6rem;
+            }
          
 
                     &__left,
@@ -40,7 +44,11 @@
                     li {
                       list-style-type: none;
                       margin-bottom: 20px;
-                      font-size: 30px;
+                      font-size: 1rem;
+
+                      @include atSmall {
+                        font-size: 1rem;
+                      }
                     }
 
                     a:hover {
@@ -48,4 +56,3 @@
                     }
         }
 }
-

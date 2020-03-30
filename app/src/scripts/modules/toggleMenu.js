@@ -1,6 +1,6 @@
 import AOS from 'aos'
    
-export function toggleMeu(){
+function toggleMeu(){
   let hamburger = document.querySelector('.hamburger')
   let bar1 = hamburger.querySelector('.bar-1')
   let bar2 = hamburger.querySelector('.bar-2')
@@ -17,3 +17,5 @@ export function toggleMeu(){
     AOS.init()
   })
 } 
+  
+export default toggleMeu

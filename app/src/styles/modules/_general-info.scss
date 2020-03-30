@@ -1,44 +1,65 @@
 .general-info {
-  padding-top: 100px; 
-      
+  margin-top: 8vh;
+
+  @include atSmall {
+    margin-top: 9vh;
+  }
+
+  @include atMedium {
+    margin-top: 10vh;
+  }
+       
          .container {
            width: 90%;
          }
-
-          &__about,
-          &__support,
-          &__contact {
+    
+         .info-box {
             height: 100vh;
-            padding-top: 130px;
-            font-size: 30px;
-            font-weight: 600; 
-          }
+            font-size: .9rem;
 
-          &__contact {
-            border-bottom: 1px solid  transparent;
-
-            a {
-              letter-spacing: 0.08em;
+            @include atSmall {
+              font-size: 1.2rem;
             }
           }
 
-          .bold {
-            font-weight: 600;
+          a {
+            letter-spacing: 0.15em;
           }
 
+
           h3 {
-            padding-bottom: 200px;
-            padding-top: 50px;
-            margin-top: -32px;
-            border-top: 1px solid  rgb(211, 210, 210);
+            width: 100%;
+            height: 6vh;
+            display: flex;
+            align-items: center;
+
+            @include atSmall {
+              height: 7vh;
+            }
+            @include atMedium {
+              height: 8vh;
+            }
+          }
+ 
+          .text-box {
+            width: 100%;
+            height: 86vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 2rem;
+
+            @include atSmall {
+              height: 84vh;
+            }
+
+            @include atMedium {
+              height: 82vh;
+            }
           }
  
           p {
-            width: 100%;
-            padding: 0 50px;
-            padding-bottom: 20px;
             text-align: center;
-            font-size: 25px;
           }
 
           span {

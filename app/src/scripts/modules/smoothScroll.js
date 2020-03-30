@@ -1,4 +1,4 @@
-export function scrollTo(){
+function scrollTo(){
   const links = document.querySelectorAll('a')
   for (let i = 0; i < links.length; i++) {
     let link = links[i]
@@ -31,3 +31,5 @@ export function scrollTo(){
       }, 100)
   }
 } 
+
+export default scrollTo

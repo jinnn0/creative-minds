@@ -9,7 +9,7 @@ function scrollTo(){
       link.onclick = scrollAnchors;
     }
   }
-
+ 
 
   function scrollAnchors(e, respond = null) {
       e.preventDefault()

@@ -1,7 +1,9 @@
 function scrollTo(){
-  const links = document.querySelectorAll('a')
+  const links = document.querySelectorAll('a') 
+
   for (let i = 0; i < links.length; i++) {
     let link = links[i]
+
     if ((link.href && link.href.indexOf('#') != -1) 
        && ((link.pathname == location.pathname) 
        || ('/' + link.pathname == location.pathname)) 
@@ -11,14 +13,13 @@ function scrollTo(){
   }
  
 
-  function scrollAnchors(e, respond = null) {
+  function scrollAnchors(e, respond = null) { 
       e.preventDefault()
       const distanceToTop = el => Math.floor(el.getBoundingClientRect().top)
       let targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href')
       const targetAnchor = document.querySelector(targetID)
       if (!targetAnchor) return;
       const originalTop = distanceToTop(targetAnchor)
-  
       window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' })
       
       const checkIfDone = setInterval(function() {
@@ -30,6 +31,6 @@ function scrollTo(){
           }
       }, 100)
   }
-} 
+}  
 
 export default scrollTo
